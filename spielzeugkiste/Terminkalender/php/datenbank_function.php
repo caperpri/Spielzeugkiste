@@ -146,6 +146,26 @@ include '../config.php';
 	}
 }
 
+function select_l($id) {
+include '../config.php';
+
+	$sel = "SELECT * FROM tbl_termin
+				WHERE termin_id = '$id'";
+				
+	$result = $conn->query($sel);
+	
+	while($row = $result->fetch_assoc()) {
+				$id = $row["termin_id"];
+				$datum= $row["ereignisdatum"];
+				$uhr = $row["uhrzeit"];
+				$schrift = $row["text_schrift"];
+				$memo = $row["text_memo"]; 
+		
+		$loeschen = array($datum, $schrift,$uhr, $memo,$id);
+		return $loeschen;
+	}
+}
+
 
 
 //SELECT FUR ANSEHEN
@@ -170,6 +190,8 @@ include '../config.php';
 }
 
 function delete($id) {
+include '../config.php';
+
 	$delete = "DELETE FROM tbl_termin WHERE termin_id = '$id' ";
 	$result = $conn->query($delete);
 		

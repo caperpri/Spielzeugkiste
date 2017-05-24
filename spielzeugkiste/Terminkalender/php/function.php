@@ -107,7 +107,7 @@ function javascript() {
 echo '	<script language="javascript" type="text/javascript" src="../js/js_funktionen.js"></script>
 			<script language="javascript" type="text/javascript" src="../js/calender.js"></script>';
 
-	if((isset ($_POST["ansehen"]) ) || (isset ($_POST["anlegen"]) ) ||  (isset ($_POST["override_termin"]) ) || (isset ($_POST["update"]) ) || (isset ($_POST["un_loeschen"]) )) {
+	if( (isset ($_POST["ansehen"]) ) || (isset ($_POST["anlegen"]) ) ||  (isset ($_POST["override_termin"]) ) || (isset ($_POST["update"]) ) || (isset ($_POST["un_loeschen"]) )|| (isset ($_POST["loeschen"]) ) ){
 	
 		echo ' 	<script type="text/javascript">
 						display_toggle("ansehen_toggle");

@@ -33,6 +33,12 @@
 			 }
 		}
 		
+		if(isset ($_POST["loeschen"]) ) {
+			$id = $_POST["loeschen"];
+			$loeschen = select_l($id);
+				echo '<h2>Wollen Sie den Termin wirklich löschen?</h2>';
+		}
+		
 		if(isset ($_POST["un_loeschen"]) ) {
 			$delete = delete($_POST["un_loeschen"]);
 			if ($delete == TRUE) {
@@ -55,6 +61,9 @@
 			}
 			if(isset ($_POST["update"]) ) {
 				echo $update_confirmed[0];
+			}
+			if(isset ($_POST["loeschen"]) ) {
+				echo $loeschen[0];
 			}
 			if(isset ($_POST["un_loeschen"]) ) {
 				echo 'GELÖSCHT';
@@ -84,9 +93,14 @@
 					if(isset ($_POST["update"]) ) {
 						echo $update_confirmed[1];
 					}
+					
+					if(isset ($_POST["loeschen"]) ) {
+						echo $loeschen[1];
+					}
+					
 					if(isset ($_POST["un_loeschen"]) ) {
 						echo "GELÖSCHT";
-			}
+					}
 				?>
 			</div>
 			
@@ -110,6 +124,10 @@
 					
 					if(isset ($_POST["update"]) ) {
 						echo $update_confirmed[2];
+					}
+					
+					if(isset ($_POST["loeschen"]) ) {
+						echo $loeschen[2];
 					}
 			
 					if(isset ($_POST["un_loeschen"]) ) {
@@ -140,8 +158,12 @@
 						echo $update_confirmed[3];
 					}
 					
+					if(isset ($_POST["loeschen"]) ) {
+						echo $loeschen[3];
+					}
+					
 					if(isset ($_POST["un_loeschen"]) ) {
-						echo $datum;
+						echo 'GELÖSCHT';
 					}
 				?>
 			</div>
@@ -176,7 +198,7 @@
 		}
 		
 		if (isset ($_POST["loeschen"]) ) {
-			loeschen_footer($_POST["loeschen"]);
+			loeschen_footer($id);
 		}
 	?>
 		</div>
