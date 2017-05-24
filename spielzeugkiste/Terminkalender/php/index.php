@@ -40,11 +40,11 @@
 	
 	<nav class="center" >
 		<ul>
-			<span onclick='display_toggle("home_toggle")'>
+			<a href="index.php">
 				<li class="pointer">
 					Home
 				</li>
-			</span>
+			</a>
 		
 			<span onclick='calender()'>
 				<li class="pointer ">

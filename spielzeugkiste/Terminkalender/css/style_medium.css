@@ -61,6 +61,13 @@ footer {
 	clear: both;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:link, a:hover, a:active, a:visited {
+	color: black;
+}
 /*********************
 NAVIGATION
 **********************/
