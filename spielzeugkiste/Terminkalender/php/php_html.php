@@ -46,7 +46,7 @@ function ansehen_footer($id) {
 	
 	echo '<form class="inline width100 talign_center" action="index.php" method="post">
 				<button class="width50 inline footer_button pointer"type="submit" name="loeschen" value="'.$id.'">Löschen</button>
-				<button class="width50 inline footer_button pointer"type="submit" name="bearbeiten" value="'.$id.'">bearbeiten</button>
+				<button class="width50 inline footer_button pointer"type="submit" name="bearbeiten" value="'.$id.'">Bearbeiten</button>
 			</form>';
 }
 
