@@ -1,0 +1,29 @@
+#Sie können den Inhalt der Datei einfach in das SQL-Feld Ihres Servers ziehen, welches für Datenbanken zuständig ist.
+#Falls es Fehler gibt oder Sie die Datenbank Löschen wollen, müssen Sie nur die Raute vor dem Drop-Befehl  löschen und den Befehl in das SQL-Feld posten.
+
+#Datenbank loeschen
+
+#DROP DATABASE sp_termin_datenbank;
+
+
+#Datenbank erstellen
+
+CREATE DATABASE sp_termin_datenbank
+ DEFAULT CHARACTER SET utf8mb4
+  DEFAULT COLLATE utf8mb4_general_ci;
+  
+#vorhandene Datenbank benutzen
+
+USE sp_termin_datenbank;
+
+#Tabelle zur Speicherung der Termine
+CREATE TABLE tbl_termin
+(
+termin_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+erstellungsdatum DATETIME,
+ereignisdatum DATE,
+uhrzeit TIME,
+text_schrift VARCHAR(255),
+text_memo VARCHAR(255),
+bearbeitungsdatum DATETIME
+);
