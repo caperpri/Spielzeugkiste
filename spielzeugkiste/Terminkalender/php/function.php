@@ -116,7 +116,7 @@ echo '	<script language="javascript" type="text/javascript" src="../js/js_funkti
 	
 	if (isset ($_POST["bearbeiten"]) ) {
 		echo '	<script type="text/javascript">
-						b_calender();
+						display_toggle("bearbeiten_toggle");
 					</script>';
 	}
 	
