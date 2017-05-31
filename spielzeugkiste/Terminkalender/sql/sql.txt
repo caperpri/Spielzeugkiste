@@ -1,4 +1,4 @@
-#Sie können den Inhalt der Datei einfach in das SQL-Feld Ihres Servers ziehen, welches für Datenbanken zuständig ist.
+﻿#Sie können den Inhalt der Datei einfach in das SQL-Feld Ihres Servers ziehen, welches für Datenbanken zuständig ist.
 #Falls es Fehler gibt oder Sie die Datenbank Löschen wollen, müssen Sie nur die Raute vor dem Drop-Befehl  löschen und den Befehl in das SQL-Feld posten.
 
 #Datenbank loeschen
@@ -24,6 +24,6 @@ erstellungsdatum DATETIME,
 ereignisdatum DATE,
 uhrzeit TIME,
 text_schrift VARCHAR(255),
-text_memo VARCHAR(255),
+text_memo VARCHAR(3500),
 bearbeitungsdatum DATETIME
 );

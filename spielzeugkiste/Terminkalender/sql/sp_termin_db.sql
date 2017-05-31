@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 24. Mai 2017 um 11:23
+-- Erstellungszeit: 31. Mai 2017 um 09:08
 -- Server-Version: 10.1.16-MariaDB
 -- PHP-Version: 7.0.9
 
@@ -32,7 +32,7 @@ CREATE TABLE `tbl_termin` (
   `ereignisdatum` date DEFAULT NULL,
   `uhrzeit` time DEFAULT NULL,
   `text_schrift` varchar(255) DEFAULT NULL,
-  `text_memo` varchar(255) DEFAULT NULL,
+  `text_memo` varchar(3500) DEFAULT NULL,
   `bearbeitungsdatum` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -54,7 +54,7 @@ ALTER TABLE `tbl_termin`
 -- AUTO_INCREMENT für Tabelle `tbl_termin`
 --
 ALTER TABLE `tbl_termin`
-  MODIFY `termin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `termin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
